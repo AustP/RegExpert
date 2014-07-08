@@ -1,0 +1,103 @@
+<html manifest="manifest.php">
+  <head>
+    <title>JS RegExpert</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link type="text/css" rel="stylesheet" media="screen" href="../lib/jqtouch/jqtouch.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="regexpert.css">
+    <link rel="apple-touch-icon-precomposed" href="favicon.png">
+    <script type="text/javascript" src="../lib/zepto/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../lib/jqtouch/jqtouch.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="regexpert.js"></script>
+  </head>
+  <body>
+    <div id="home">
+      <div class="toolbar">
+        <h1>RegExpert</h1>
+        <a class="button" href="#help">Help</a>
+      </div>
+      <form method="post">
+        <ul class="rounded">
+          <li><input id="regexp" type="text" placeholder="RegExp" name="regexp"/></li>
+          <li><textarea id="haystack" placeholder="Haystack" name="haystack"></textarea></li>
+        </ul>
+        <a id="submit" class="whiteButton">Test RegExp</a>
+      </form>
+      <div id="container">
+        <h2>Results:</h2>
+        <ul class="rounded">
+        </ul>
+      </div>
+    </div>
+    <div id="help">
+      <div class="toolbar">
+        <h1>RegExpert Helper</h1>
+        <a class="back" href="#">Back</a>
+      </div>
+      <ul class="rounded">
+        <li id="info">This application was made for those who are already 
+        familiar with JavaScript Regular Expressions and wish to test
+        theirs.<br><br>
+        Format RegExps like: /[a-z]/g</li>
+      </ul>
+      <ul class="rounded">
+        <li>Anchors</li>
+        <li>^<span class="right">Start of string, or start of line in multi-line pattern</span></li>
+        <li>$<span class="right">End of string, or end of line in multi-line pattern</span></li>
+        <li>\b<span class="right">Word boundary</span></li>
+        <li>\B<span class="right">Not word boundary</span></li>
+        <li>Character Classes</li>
+        <li>\c<span class="right">Control character</span></li>
+        <li>\s<span class="right">White space</span></li>
+        <li>\S<span class="right">Not white space</span></li>
+        <li>\d<span class="right">Digit</span></li>
+        <li>\D<span class="right">Not digit</span></li>
+        <li>\w<span class="right">Word character</span></li>
+        <li>\W<span class="right">Not word character</span></li>
+        <li>Assertions</li>
+        <li>?=<span class="right">Lookahead assertion</span></li>
+        <li>?!<span class="right">Negative lookahead</span></li>
+        <li>Quantifiers</li>
+        <li>*<span class="right">0 or more</span></li>
+        <li>+<span class="right">1 or more</span></li>
+        <li>?<span class="right">0 or 1</span></li>
+        <li>{3}<span class="right">Exactly 3</span></li>
+        <li>{3,}<span class="right">3 or more</span></li>
+        <li>{3,5}<span class="right">3, 4, or 5</span></li>
+        <li><span class="small">Add a ? to a quantifier to make it ungreedy.</span></li>
+        <li>Common Metacharacters</li>
+        <li>^ [ ] . $ { } * ( ) \ + | ? < ></li>
+        <li><span class="small">The escape character is usually the backslash \</span></li>
+        <li>Special Characters</li>
+        <li>\n<span class="right">New line</span></li>
+        <li>\r<span class="right">Carriage return</span></li>
+        <li>\t<span class="right">Tab</span></li>
+        <li>\v<span class="right">Vertical tab</span></li>
+        <li>\f<span class="right">Form feed</span></li>
+        <li>\xxx<span class="right">Octal character xxx</span></li>
+        <li>\xhh<span class="right">Hex character hh</span></li>
+        <li>\uhhhh<span class="far right">Unicode character with hex code hhhh</span></li>
+        <li>Groups and Ranges</li>
+        <li>.<span class="far right">Any character except new line (\n)</span></li>
+        <li>(a|b)<span class="far right">a or b</span></li>
+        <li>(...)<span class="far right">Group</span></li>
+        <li>(?:...)<span class="far right">Passive (non-capturing) group</span></li>
+        <li>[abc]<span class="far right">Range (a or b or c)</span></li>
+        <li>[^abc]<span class="far right">Not a or b or c</span></li>
+        <li>[a-q]<span class="far right">Letter from a to q</span></li>
+        <li>[A-Q]<span class="far right">Upper case letter from A to Q</span></li>
+        <li>[0-7]<span class="far right">Digit from 0 to 7</span></li>
+        <li>\x<span class="far right">xth group/subpattern</span></li>
+        <li><span class="small">Ranges are inclusive.</span></li>
+        <li>Pattern Modifiers</li>
+        <li>g<span class="right">Global match</span></li>
+        <li>i<span class="right">Case-insensitive</span></li>
+        <li>m<span class="right">Multiple lines</span></li>
+      </ul>
+      <ul class="rounded">
+        <li id="link"><span class="link">Special thanks to Dave Child for his<br>
+        <span style="color:#36F;">Regular Expressions Cheat Sheet</span><br>
+        *His Cheat Sheet isn't JavaScript specific.</span></li>
+      </ul>
+    </div>
+  </body>
+</html>
